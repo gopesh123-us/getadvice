@@ -1,4 +1,6 @@
-# QuoteOfTheDay
+# GetAdvice - Angular App
+
+This is an angular application that makes a API call to the advice API and displays a random advice on the page only if we choose a valid number between 1 and 10 (inclusive).
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.0.6.
 

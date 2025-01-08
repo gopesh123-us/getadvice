@@ -1,0 +1,23 @@
+<div
+  class="bg-gradient-to-r from-[#00b09b] to-[#96c93d] w-full h-screen absolute flex items-center justify-center font-sans"
+>
+  <div
+    class="container w-[500px] h-[500px] bg-emerald-100 rounded-lg flex flex-col items-center justify-center"
+  >
+    <h1
+      class="text-3xl text-neutral-700 font-semibold flex-col mb-5 items-center"
+    >
+      Get Advice
+    </h1>
+    <input
+      type="text"
+      placeholder="Choose a number between 1 to 10"
+      (input)="handleChoice($event)"
+      class="h-10 w-[300px] text-base p-5 border rounded-md mb-5"
+    />
+    <div class="w-3/5">
+      <h1 class="text-2xl mb-10">{{ message }}</h1>
+      <p class="text-neutral-600">{{ advice }}</p>
+    </div>
+  </div>
+</div>
