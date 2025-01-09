@@ -14,24 +14,26 @@ export class MainComponent {
   advice: string = '';
 
   handleChoice(event: any) {
-    const choosenNumber: any = event.target.value;
-    if (!event.target.value) {
-      this.message = '';
-      this.advice = '';
-    } else {
-      if (
-        choosenNumber > 10 ||
-        choosenNumber < 1 ||
-        !this.isNumeric(parseInt(choosenNumber))
-      ) {
-        this.message = 'Invalid choice';
+    setTimeout(() => {
+      const choosenNumber: any = event.target.value;
+      if (!event.target.value) {
+        this.message = '';
         this.advice = '';
       } else {
-        this.choice = choosenNumber;
-        this.message = 'Your choice is ' + this.choice;
-        this.fetchDetails();
+        if (
+          choosenNumber > 10 ||
+          choosenNumber < 1 ||
+          !this.isNumeric(parseInt(choosenNumber))
+        ) {
+          this.message = 'Invalid choice';
+          this.advice = '';
+        } else {
+          this.choice = choosenNumber;
+          this.message = 'Your choice is ' + this.choice;
+          this.fetchDetails();
+        }
       }
-    }
+    }, 200);
   }
   private isNumeric(str: any) {
     return typeof str === 'number' && !isNaN(str);
